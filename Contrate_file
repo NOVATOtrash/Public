@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Html</title>
+  
+  <style>
+  body {
+
+display: flex;
+
+justify-content: center; align-items: center;
+    background:#191919;
+
+
+height: 100vh;}
+
+a
+
+{
+
+text-decoration: none;
+
+}
+
+.box {
+
+font-size: 20px;
+
+color: white; height: 250px;
+
+width: 350px;
+
+background:#191919;
+
+border-radius: 10px; flex-direction: column; align-items: center; justify-content: center;
+
+display: flex;
+  z-index:97;
+
+}
+
+.buttons-container {
+
+display: flex;
+
+justify-content: space-around;
+
+height: 50px;
+
+width: 150px;
+
+}
+  button {
+
+height: 30px;
+
+width: 50px; background: white;
+
+border-radius: 5px;
+
+    border:solid 1px #777;
+
+    font-weight: 600;
+    
+  }
+  #no {
+    z-index:101;
+    color:#933;
+    
+  }
+ 
+  
+  #pname{
+    z-index:97;
+    
+  }
+  
+  .undertext{
+    color:white;
+    z-index:5;
+    position:fixed;
+    font-size:10px;
+    margin-top:50px;
+  }
+    
+    #yeah {
+      color:#339;
+      z-index:100;
+     
+      
+    }
+  
+  </style>
+</head>
+<body>
+  
+  <p class="undertext">' CHAMEM PV E ME CONTRATEM  <( T-T)> '</p>
+  <div class="box" id="boxId">
+
+<p id="pname">Estão pensando em me contratar?</p> <div class="buttons-container">
+
+<button id="yeah" onclick="yeahButtonFunc()">Sim</button>
+  <button id="no">Não</button>
+
+</div>
+
+</div>
+  
+  
+  
+</body>
+
+<script>
+
+let button = document.getElementById('no'); 
+let height = window.innerHeight - 50;
+let width = window.innerWidth - 50;
+
+
+button.addEventListener('mouseover', function () { button.style.position = "absolute";
+
+
+button.style.top = Math.random() * height + "px";
+button.style.left = Math.random() * width + "px";
+})
+const boxId = document.getElementById("boxId");
+const yeah = document.getElementById("yeah");
+ function yeahButtonFunc(){
+   boxId.remove();
+  
+ }
+</script>
+</html>
